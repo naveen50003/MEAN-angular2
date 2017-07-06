@@ -1,0 +1,25 @@
+<!-- <div class="row">
+    <div class="col-xs-6 col-sm-4">
+        <app-movieitem></app-movieitem>
+    </div>
+</div>
+ -->
+<select class="selectpicker" #sel (change)="select.emit(sel.value)">
+    <option title="{{item}}" *ngFor="let item of sortingCerteria">{{item}}</option>
+</select>
+<ng-container *ngIf="movieItems">
+    <div class="row">
+        <div class="col-xs-6
+    col-sm-4" *ngFor="let item of movieItems|sortImpurePipe :sel.value" >
+            <app-movieitem [moviesList]="item"></app-movieitem>
+        </div>
+    </div>
+</ng-container>
+      <!--  
+        <select class="selectpicker" #sel (change)="itemChanged($event)">
+            <option title="{{item}}" *ngFor="let item of sortingCerteria">{{item}}</option>
+        </select>
+        <div class="col-xs-6
+            col-sm-4" *ngFor="let item of movieItems|sortImpurePipe :sortValue" >
+            <app-movieitem [moviesList]="item"></app-movieitem>
+        </div> -->

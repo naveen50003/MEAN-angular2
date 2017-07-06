@@ -1,0 +1,11 @@
+<div>
+    <div><img src="assets/{{moviesList.image}}" /></div>
+    <div>
+        <h3>{{moviesList.title}}</h3>
+        <p>{{moviesList.releaseDate | date: 'dd-MMM-yy'}}</p>
+        <p>Rating:{{rate}}</p>
+    </div>
+    <rating [(ngModel)]="rate" [max]="max" [readonly]="isreadOnly" (onClick)="hoveringOver($event)"></rating>
+    <!-- <app-star-directive></app-star-directive>
+ -->
+</div>
