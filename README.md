@@ -33,6 +33,7 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 ## Run Application
 
 ng build
+
 node server.js
 
 Open localhost:2000 in webbrowser
