@@ -12,7 +12,7 @@ export class MovieGridServiceService {
 
   constructor(private http:Http) { }
 
-  private baseUrl="http://localhost:2000/api/movies";
+  private baseUrl=window.location.href+"api/movies";
 
   getMovies():Observable<MovieItemType[]>{
     return this.http.get(this.baseUrl)
